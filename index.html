@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>universe</title>
+    <style>
+
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: black;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .container{
+            font-size: 10px;
+            width: 40em;
+            height: 40em;
+            position: relative;
+        }
+
+        .sun{
+            position: absolute;
+            top: 15em;
+            left: 15em;
+            width: 10em;
+            height: 10em;
+            background-color: rgb(160, 4, 4);
+            border-radius: 50%;
+            box-shadow: 0 0 3em rgb(188, 169, 172);
+        }
+        
+        .earth{
+            position: absolute;
+            border-style: solid;
+            border-color: rgb(88, 168, 166)
+            transparent transparent transparent;
+            border-width: 0.1em 0.1em 0 0;
+            border-radius: 50%;
+        }
+
+        .moon{
+            position: absolute;
+            border-style: solid;
+            border-color: rgb(147, 157, 145)
+            transparent transparent transparent;
+            border-width: 0.1em 0.1em 0 0;
+            border-radius: 50%;
+        }
+
+        .earth{
+            top: 5em;
+            left: 5em;
+            width: 30em;
+            height: 30em;
+            animation: orbit 12s linear infinite;
+        }
+
+        .moon{
+            top: 0;
+            right: 0;
+            width: 8em;
+            height: 8em;
+            animation: orbit 3s linear infinite;
+        }
+
+        .earth::before,
+        .moon::before{
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .earth::before{
+            top: 2.8em;
+            right: 2.8em;
+            width: 3em;
+            height: 3em;
+            background-color: rgb(19, 129, 118);
+        }
+
+        .moon::before{
+            top: 0.8em;
+            right: 0.2em;
+            width: 1.2em;
+            height: 1.2em;
+            background-color: silver;
+        }
+
+        @keyframes orbit {
+            from{
+                transform:rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }    
+        }
+
+        .h2{
+            background-color: black;
+            text-align: center;
+            color: rgb(43, 75, 156);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sun"></div>
+        <div class="earth">
+            <div class="moon">   
+            </div>
+        </div>
+    </div>
+    <div class="h2">
+        <h2><strong>UNIVERSE</strong></h2>
+    </div>
+</body>
+</html>
